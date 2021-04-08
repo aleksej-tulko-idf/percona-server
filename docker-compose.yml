@@ -1,0 +1,15 @@
+version: '2'
+services:
+### Percona Container ########################################
+    percona:
+        container_name: percona
+        image: my-percona-test:latest
+        environment:
+            - MYSQL_DATABASE=${PERCONA_DATABASE}
+            - MYSQL_USER=${PERCONA_USER}
+            - MYSQL_PASSWORD=${PERCONA_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${PERCONA_ROOT_PASSWORD}
+        volumes:
+            - ${DATA_SAVE_PATH}/percona:/var/lib/mysql:rw
+        ports:
+            - "${PERCONA_PORT}:3306"
