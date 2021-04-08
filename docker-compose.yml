@@ -10,6 +10,6 @@ services:
             - MYSQL_PASSWORD=${PERCONA_PASSWORD}
             - MYSQL_ROOT_PASSWORD=${PERCONA_ROOT_PASSWORD}
         volumes:
-            - ${DATA_SAVE_PATH}/percona:/var/lib/mysql:rw
+            - ${DATA_SAVE_PATH}:/var/lib/mysql:rw
         ports:
             - "${PERCONA_PORT}:3306"
