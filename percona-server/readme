@@ -1,4 +1,0 @@
-Before launchin the container, there on the host:
-
-- add user and group 'mysql' with 999 uid and gid
-- run 'mkdir /data && chown mysql:mysql /data'
